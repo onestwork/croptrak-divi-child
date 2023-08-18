@@ -1433,6 +1433,7 @@ body.single .et_pb_post_content a {
 }
 .s-posts-nav.et_pb_posts_nav > div.nav-next {
   text-align: right;
+  margin-left: auto;
 }
 .s-posts-nav.et_pb_posts_nav > div.nav-next .nav-content {
   margin-right: 1.3rem;
