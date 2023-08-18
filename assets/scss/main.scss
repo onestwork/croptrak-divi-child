@@ -825,6 +825,14 @@ body.home .et_pb_number_counter {
     }
   }
 }
+.et_pb_testimonial_description_inner + .et_pb_testimonial_meta > span {
+  margin-top: 0;
+
+  @media (min-width: 981px) {
+    margin-top: 16px;
+  }
+}
+
 /* ----------------------------------------- 	testimonial */
 
 /* 	posts and pages  */
@@ -1388,7 +1396,7 @@ body.home .et_pb_number_counter {
         &.current-menu-item {
           a {
             color: $white !important;
-            background-size: 100% 1.5px;
+            // background-size: 100% 1.5px;
           }
         }
 
@@ -1505,3 +1513,4 @@ body.home .et_pb_number_counter {
   }  
 }
 /* ----------------------------------------- HomeTimeline */
+

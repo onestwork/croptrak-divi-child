@@ -990,6 +990,15 @@ body.home .et_pb_number_counter {
   font-family: "IBM Plex Serif", serif;
 }
 
+.et_pb_testimonial_description_inner + .et_pb_testimonial_meta > span {
+  margin-top: 0;
+}
+@media (min-width: 981px) {
+  .et_pb_testimonial_description_inner + .et_pb_testimonial_meta > span {
+    margin-top: 16px;
+  }
+}
+
 /* ----------------------------------------- 	testimonial */
 /* 	posts and pages  */
 /* ----------------------------------------- */
@@ -1503,7 +1512,6 @@ body.single .et_pb_post_content a {
 }
 .et-l--footer .et_pb_menu .et_pb_menu__menu > nav > ul > li.current-menu-item a {
   color: #ffffff !important;
-  background-size: 100% 1.5px;
 }
 @media (min-width: 981px) {
   .et-l--footer .et_pb_menu .et_pb_menu__menu > nav > ul > li {
