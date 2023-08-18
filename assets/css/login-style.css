@@ -1,0 +1,45 @@
+body.login {
+  background-color: theme-color("primary");
+}
+body.login h1 a {
+  width: 90% !important;
+  height: 90px !important;
+  margin: 80px auto 5px;
+}
+body.login #loginform {
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  box-shadow: none;
+}
+body.login #loginform label {
+  color: #0D162B;
+  font-weight: 300;
+}
+body.login #loginform #wp-submit {
+  border: none;
+  background-color: #0D162B;
+  color: #fff;
+  box-shadow: none;
+  padding: 0 20px;
+  text-shadow: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: 0;
+}
+body.login #nav, body.login #backtoblog {
+  color: #cccccc !important;
+  text-align: center;
+  padding-left: 0;
+}
+body.login #nav a, body.login #backtoblog a {
+  color: #cccccc !important;
+  text-decoration: none;
+  text-shadow: none;
+}
+body.login #nav a:hover, body.login #backtoblog a:hover {
+  color: #cccccc !important;
+  text-decoration: underline;
+}
+body.login .button.button-primary {
+  background-color: theme-color("primary");
+}

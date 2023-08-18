@@ -1,0 +1,53 @@
+body.login {
+  background-color: theme-color("primary");
+  h1 {
+    a {
+      width: 90% !important;
+      height: 90px !important;
+      margin: 80px auto 5px;
+    }
+  }
+
+  #loginform {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    box-shadow: none;
+
+    label {
+      color: #0D162B;
+      font-weight: 300;
+    }
+    #wp-submit {
+      border: none;
+      background-color: #0D162B;
+      color: #fff;
+      box-shadow: none;
+      padding: 0 20px;
+      text-shadow: none;
+      text-transform: uppercase;
+      border-radius: 0;
+      border: 0;
+    }
+  } // #loginform
+
+  #nav, #backtoblog {
+    color: #cccccc !important;
+    text-align: center;
+    padding-left: 0;
+    a {
+      color: #cccccc !important;
+      text-decoration: none;
+      text-shadow: none;
+      &:hover {
+        color: #cccccc !important;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .button {
+    &.button-primary {
+      background-color: theme-color("primary");
+    }
+  }
+}
