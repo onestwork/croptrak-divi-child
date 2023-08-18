@@ -26,8 +26,12 @@
     var barIndicator = document.createElement('div');
     barIndicator.setAttribute('id', 'progress-indicator');
     var dotIndicator = document.createElement('div');
+    dotIndicator.setAttribute('id', 'dot-indicator');
+    var barBaseIndicator = document.createElement('div');
+    barBaseIndicator.setAttribute('id', 'bar-base-indicator');
     // Insert the dot inside the bar
     barIndicator.appendChild(dotIndicator);
+    barIndicator.appendChild(barBaseIndicator);
     // Append the bar to the element with the ID "gsap-timeline"
     gsapTimeline.appendChild(barIndicator);
   /* ----------------------------------------- Create Elements For The Animation Timeline */
@@ -39,14 +43,11 @@
       let mouseX = e.clientX - rect.left; // Get the mouse position relative to the timeline's left edge        
       let percentage = (mouseX / rect.width) * 100; // Calculate percentage        
       // Use GSAP to smoothly update the width of the progress indicator
-      gsap.to(barIndicator, {
-          width: `${percentage}%`,
-          duration: 0.3
-      });
+      gsap.to(dotIndicator, { width: `${percentage}%`, duration: 0.3 });
     });
     
     gsapTimeline.addEventListener('mouseleave', (e) => {
-      gsap.to(barIndicator, { width: 0, duration: 0.8 });
+      gsap.to(dotIndicator, { width: 0, duration: 0.8 });
     })
   /* ----------------------------------------- Animate the bar based on mouse position */
 

@@ -344,7 +344,7 @@ $white: #ffffff;
 
       .et_pb_text {
         padding-top: 45px;
-        border-top: 5px solid $primary-dark;
+        border-top: 5px solid transparent;
         padding-left: 0;
       }
 
@@ -411,24 +411,6 @@ $white: #ffffff;
             position: absolute;
             top: -5px; left: -100%;
             display: none;
-
-            @media (min-width: 1200px) {
-              display: inline-block;
-            }
-          }
-        }
-      }
-
-      &:nth-child(4) {
-        .et_pb_text {
-
-          &:after {
-            content: '';
-            display: none;
-            position: absolute;
-            top: -28px; right: -45px;
-            width: 45px; height: 50px;
-            background: url(../images/arrow.svg) no-repeat center top;
 
             @media (min-width: 1200px) {
               display: inline-block;
@@ -1453,14 +1435,13 @@ body.home .et_pb_number_counter {
     cursor: default !important;
   }
 
-  #progress-indicator {      
-    background-color: #78B96D;
+  #progress-indicator {          
+    position: absolute;    
     height: 5px;
-    width: 0;
-    position: absolute;
+    width: 100%;
     top: 137px;
     z-index: 20;
-    display: none;
+    display: none;    
 
     @media (min-width: 1200px) {
       display: block;
@@ -1470,17 +1451,55 @@ body.home .et_pb_number_counter {
       top: 143px;
     }
 
-    div {
-      display: block;
+    #dot-indicator {
+      position: relative;
+      background-color: $primary-green;
+      z-index: 23;
+      height: 5px;
+      width: 0;
+      top: 0;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -13px;
+        right: -15px;
+        width: 14px;
+        height: 14px;
+        background-color: #ffffff;
+        border: 7px solid #78B96D;
+        border-radius: 50%;
+        box-sizing: content-box;
+        z-index: 22;
+      }
+    }
+
+    #bar-base-indicator {
+      width: calc(100% + 23px);
+      height: 5px;
+      background-color: black;
       position: absolute;
-      top: -13px;
-      right: -15px;
-      width: 14px;
-      height: 14px;
-      background-color: #ffffff;
-      border: 7px solid #78B96D;
-      border-radius: 50%;
-      box-sizing: content-box;
+      top: 0;      
+      &:after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-right: 6px solid black;
+        border-bottom: 6px solid black;
+        left: calc(100% - 28px);
+        transform: rotate(-45deg) translateY(-50%);
+        top: -3px;
+      }
+      &:before {
+        content: "";
+        width: 100vw;
+        height: 5px;
+        background-color: $primary-green;
+        position: absolute;
+        top: 0;
+        left: -100vw;
+      }
     }
 
   }  

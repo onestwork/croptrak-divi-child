@@ -546,7 +546,7 @@ h1, h2, h3, h4, h5, h6, p, li, span {
   }
   .s-insights .et_pb_text {
     padding-top: 45px;
-    border-top: 5px solid #231f20;
+    border-top: 5px solid transparent;
     padding-left: 0;
   }
   .s-insights .et_pb_image img {
@@ -617,21 +617,6 @@ h1, h2, h3, h4, h5, h6, p, li, span {
 }
 @media (min-width: 1200px) {
   .s-insights .et_pb_column:first-child .et_pb_text:after {
-    display: inline-block;
-  }
-}
-.s-insights .et_pb_column:nth-child(4) .et_pb_text:after {
-  content: "";
-  display: none;
-  position: absolute;
-  top: -28px;
-  right: -45px;
-  width: 45px;
-  height: 50px;
-  background: url(../images/arrow.svg) no-repeat center top;
-}
-@media (min-width: 1200px) {
-  .s-insights .et_pb_column:nth-child(4) .et_pb_text:after {
     display: inline-block;
   }
 }
@@ -1555,10 +1540,9 @@ body.single .et_pb_post_content a {
   cursor: default !important;
 }
 #gsap-timeline #progress-indicator {
-  background-color: #78B96D;
-  height: 5px;
-  width: 0;
   position: absolute;
+  height: 5px;
+  width: 100%;
   top: 137px;
   z-index: 20;
   display: none;
@@ -1573,7 +1557,16 @@ body.single .et_pb_post_content a {
     top: 143px;
   }
 }
-#gsap-timeline #progress-indicator div {
+#gsap-timeline #progress-indicator #dot-indicator {
+  position: relative;
+  background-color: #78B96D;
+  z-index: 23;
+  height: 5px;
+  width: 0;
+  top: 0;
+}
+#gsap-timeline #progress-indicator #dot-indicator:before {
+  content: "";
   display: block;
   position: absolute;
   top: -13px;
@@ -1584,6 +1577,35 @@ body.single .et_pb_post_content a {
   border: 7px solid #78B96D;
   border-radius: 50%;
   box-sizing: content-box;
+  z-index: 22;
+}
+#gsap-timeline #progress-indicator #bar-base-indicator {
+  width: calc(100% + 23px);
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+#gsap-timeline #progress-indicator #bar-base-indicator:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-right: 6px solid black;
+  border-bottom: 6px solid black;
+  left: calc(100% - 28px);
+  -webkit-transform: rotate(-45deg) translateY(-50%);
+          transform: rotate(-45deg) translateY(-50%);
+  top: -3px;
+}
+#gsap-timeline #progress-indicator #bar-base-indicator:before {
+  content: "";
+  width: 100vw;
+  height: 5px;
+  background-color: #78B96D;
+  position: absolute;
+  top: 0;
+  left: -100vw;
 }
 
 /* ----------------------------------------- HomeTimeline */
