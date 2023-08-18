@@ -721,6 +721,12 @@ $white: #ffffff;
     p {
       font-size: 0.75rem;
     }
+
+    &:last-of-type {
+      @media (min-width: 768px) {
+        padding-top: 0;      
+      }
+    }
   }
 /* ----------------------------------------- 	sections */
 
