@@ -897,7 +897,7 @@ h1, h2, h3, h4, h5, h6, p, li, span {
 .s-team p {
   font-size: 0.75rem;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .s-team:last-of-type {
     padding-top: 0;
   }

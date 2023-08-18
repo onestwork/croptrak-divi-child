@@ -723,7 +723,7 @@ $white: #ffffff;
     }
 
     &:last-of-type {
-      @media (min-width: 768px) {
+      @media (max-width: 768px) {
         padding-top: 0;      
       }
     }
