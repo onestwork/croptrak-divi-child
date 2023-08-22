@@ -1,4 +1,14 @@
 <?php
+
+// redirect solution
+add_action( 'template_redirect', 'croptrak_redirect_solutions' );
+function croptrak_redirect_solutions() {
+  if ( is_singular( 'solution' ) ) :
+    wp_redirect( get_permalink(15), 301 );
+    exit;
+  endif;
+}
+
 // WP-LOGIN
 function croptrak_custom_login() {
   echo '<link media="all" type="text/css" href="'.get_stylesheet_directory_uri().'/assets/css/login-style.css" rel="stylesheet">';
