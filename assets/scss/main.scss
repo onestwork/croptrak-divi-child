@@ -923,6 +923,7 @@ body.home .et_pb_number_counter {
         background-color: rgba($primary-dark-navy, .8);
         padding: 1.25rem 1.5rem;
         opacity: 0;
+        z-index: 1;
         @include transition(all 250ms ease-in-out);
         
         p {

@@ -26,7 +26,6 @@
   background: transparent;
   color: transparent;
   top: 50%;
-  -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   padding: 0;
   border: none;
@@ -181,7 +180,6 @@
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -243,8 +241,7 @@
 body {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
-  -webkit-font-feature-settings: "clig" off, "liga" off;
-          font-feature-settings: "clig" off, "liga" off;
+  font-feature-settings: "clig" off, "liga" off;
 }
 
 a {
@@ -534,8 +531,7 @@ h1, h2, h3, h4, h5, h6, p, li, span {
   }
 }
 .s-insights .et_pb_image.et_pb_image_3 {
-  -webkit-transform: translateY(1rem);
-          transform: translateY(1rem);
+  transform: translateY(1rem);
 }
 .s-insights .et_pb_text {
   padding-left: 1rem;
@@ -550,8 +546,7 @@ h1, h2, h3, h4, h5, h6, p, li, span {
     padding-left: 0;
   }
   .s-insights .et_pb_image img {
-    -webkit-transform: translateX(-40%);
-            transform: translateX(-40%);
+    transform: translateX(-40%);
   }
 }
 .s-insights .et_pb_column {
@@ -699,8 +694,7 @@ h1, h2, h3, h4, h5, h6, p, li, span {
   border-top: 0;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .s-clients .et_pb_gallery_pagination ul {
   display: flex;
@@ -732,23 +726,19 @@ h1, h2, h3, h4, h5, h6, p, li, span {
   font-size: 0px;
 }
 .s-clients .et_pb_gallery_pagination ul .prev {
-  -webkit-transform: translateX(-45px);
-          transform: translateX(-45px);
+  transform: translateX(-45px);
   background-image: url(../images/arrow-prev.svg);
 }
 .s-clients .et_pb_gallery_pagination ul .prev:hover {
-  -webkit-transform: translateX(-55px);
-          transform: translateX(-55px);
+  transform: translateX(-55px);
 }
 .s-clients .et_pb_gallery_pagination ul .next {
   margin-left: auto;
-  -webkit-transform: translateX(45px);
-          transform: translateX(45px);
+  transform: translateX(45px);
   background-image: url(../images/arrow-next.svg);
 }
 .s-clients .et_pb_gallery_pagination ul .next:hover {
-  -webkit-transform: translateX(55px);
-          transform: translateX(55px);
+  transform: translateX(55px);
 }
 .s-clients .et_pb_gallery_pagination .page {
   display: none !important;
@@ -794,8 +784,7 @@ h1, h2, h3, h4, h5, h6, p, li, span {
   position: absolute;
   top: 60%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 330px;
   height: 330px;
   border: 3px solid #0D162B;
@@ -951,8 +940,7 @@ h1, h2, h3, h4, h5, h6, p, li, span {
   }
 }
 .et_pb_number_counter.first .percent {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 body.home .et_pb_number_counter {
@@ -1086,6 +1074,7 @@ body.home .et_pb_number_counter {
   background-color: rgba(13, 22, 43, 0.8);
   padding: 1.25rem 1.5rem;
   opacity: 0;
+  z-index: 1;
   transition: all 250ms ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1423,8 +1412,7 @@ body.single .et_pb_post_content a {
   margin-left: 1.3rem;
 }
 .s-posts-nav.et_pb_posts_nav > div.nav-previous a:hover .nav-icon {
-  -webkit-transform: translateX(-5px);
-          transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 @media (min-width: 768px) {
   .s-posts-nav.et_pb_posts_nav > div.nav-previous {
@@ -1439,8 +1427,7 @@ body.single .et_pb_post_content a {
   margin-right: 1.3rem;
 }
 .s-posts-nav.et_pb_posts_nav > div.nav-next a:hover .nav-icon {
-  -webkit-transform: translateX(5px);
-          transform: translateX(5px);
+  transform: translateX(5px);
 }
 .s-posts-nav.et_pb_posts_nav a {
   color: #000000;
@@ -1608,8 +1595,7 @@ body.single .et_pb_post_content a {
   border-right: 6px solid black;
   border-bottom: 6px solid black;
   left: calc(100% - 28px);
-  -webkit-transform: rotate(-45deg) translateY(-50%);
-          transform: rotate(-45deg) translateY(-50%);
+  transform: rotate(-45deg) translateY(-50%);
   top: -3px;
 }
 #gsap-timeline #progress-indicator #bar-base-indicator:before {
