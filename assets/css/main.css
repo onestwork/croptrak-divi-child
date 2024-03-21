@@ -346,6 +346,10 @@ h1, h2, h3, h4, h5, h6, p, li, span {
   justify-content: center;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .et_pb_menu_0_tb_header .mobile_nav .mobile_menu_bar:before,
 .et_pb_menu_0_tb_header .et_pb_menu__icon.et_pb_menu__search-button,
 .et_pb_menu_0_tb_header .et_pb_menu__icon.et_pb_menu__close-search-button,
@@ -364,6 +368,14 @@ h1, h2, h3, h4, h5, h6, p, li, span {
 
 .et_pb_text_inner p a:hover {
   color: #78B96D;
+}
+
+.container.no-divider::before {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* ----------------------------------------- 	general */
@@ -862,21 +874,6 @@ h1, h2, h3, h4, h5, h6, p, li, span {
     width: 53%;
   }
 }
-.s-blog-header .et_pb_search {
-  border: 0;
-}
-.s-blog-header .et_pb_search_0_tb_body input.et_pb_s {
-  border: 1px solid #D1CBC0 !important;
-}
-.s-blog-header .et_pb_search_0_tb_body input.et_pb_searchsubmit {
-  font-size: 0px;
-  width: 60px;
-  background-image: url(../images/icon-search.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  color: transparent !important;
-  border: 0;
-}
 
 .s-team h4 {
   font-family: "IBM Plex Serif", serif;
@@ -890,6 +887,30 @@ h1, h2, h3, h4, h5, h6, p, li, span {
   .s-team:last-of-type {
     padding-top: 0;
   }
+}
+
+.s-blog-header .et_pb_search,
+.s-search .et_pb_search {
+  border: 0;
+}
+.s-blog-header input.et_pb_s,
+.s-blog-header .et_pb_search_0_tb_body input.et_pb_s,
+.s-search input.et_pb_s,
+.s-search .et_pb_search_0_tb_body input.et_pb_s {
+  border: 1px solid #D1CBC0 !important;
+}
+.s-blog-header input.et_pb_searchsubmit,
+.s-blog-header .et_pb_search_0_tb_body input.et_pb_searchsubmit,
+.s-search input.et_pb_searchsubmit,
+.s-search .et_pb_search_0_tb_body input.et_pb_searchsubmit {
+  font-size: 0px;
+  width: 60px;
+  background-image: url(../images/icon-search.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: transparent !important;
+  background-color: transparent;
+  border: 0;
 }
 
 /* ----------------------------------------- 	sections */
@@ -1095,6 +1116,63 @@ body.home .et_pb_number_counter {
 }
 .page-solutions .et_pb_post:hover .post-content {
   opacity: 1;
+}
+
+.page-404 h1 {
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .page-404 h1 {
+    font-size: 4.38rem;
+    letter-spacing: 0.03rem;
+    line-height: 130%;
+  }
+}
+.page-404 .entry p {
+  font-family: "IBM Plex Serif", serif;
+  display: inline-block;
+  max-inline-size: 800px;
+}
+@media (min-width: 768px) {
+  .page-404 .entry p {
+    font-size: 1.5rem;
+  }
+}
+.page-404 .et_pb_search {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+.page-404 .btn-group {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.page-404 .btn-group li {
+  width: 200px;
+}
+.page-404 .btn-group li a {
+  padding: 0.75rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  border: 1px solid #D1CBC0;
+  font-weight: 500;
+}
+.page-404 .btn-group li a:hover {
+  border-color: #78B96D;
+  background-color: #78B96D;
+  color: #ffffff;
+}
+.page-404 .btn-group li a.dark {
+  border-color: #78B96D;
+  background-color: #78B96D;
+  color: #ffffff;
+}
+.page-404 .btn-group li a.dark:hover {
+  border-color: #231f20;
+  background-color: #231f20;
+}
+.page-404 .btn-group li:not(:last-child) {
+  margin-right: 1rem;
 }
 
 body.blog .et_pb_post {

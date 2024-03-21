@@ -1,4 +1,12 @@
 <?php
+// redirect blog to media
+add_action('init', 'croptrak_custom_redirects');
+function croptrak_custom_redirects() {
+  if (preg_match('/^\/blog\/(.*)/', $_SERVER['REQUEST_URI'], $matches)) {
+    wp_redirect(home_url('/media/' . $matches[1]), 301);
+    exit;
+  }
+}
 
 // redirect solution
 add_action( 'template_redirect', 'croptrak_redirect_solutions' );
