@@ -20,7 +20,6 @@
           <div class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough">
             <div class="entry">
               <p>Sorry, the page you are looking for doesn't exist <br>or has been moved.</p>
-              <p>Here are some helpful links:</p>
 
               <?php echo do_shortcode('[et_pb_search _builder_version=”4.21.0″ _module_preset=”default” theme_builder_area=”post_content” hover_enabled=”0″ sticky_enabled=”0″][/et_pb_search]'); ?>
 
